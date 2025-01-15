@@ -1,0 +1,183 @@
+/* App.css */
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+
+  --primary: 222.2 47.4% 11.2%;
+  --primary-foreground: 210 40% 98%;
+
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 222.2 84% 4.9%;
+
+  --radius: 0.5rem;
+}
+
+/* Apply base styles */
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.App {
+  background-color: hsl(var(--card));
+  color: hsl(var(--card-foreground));
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  max-width: 800px;
+  width: 90%;
+  margin: 20px;
+}
+
+h1 {
+  color: hsl(var(--foreground));
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.product-message {
+  background-color: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.message-text {
+  white-space: pre-wrap; /* Preserve line breaks but allow text to wrap */
+  word-wrap: break-word; /* Break long words if necessary */
+}
+
+.step {
+  background-color: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin: 1.5rem auto;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+button {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: hsl(var(--primary) / 0.9);
+}
+
+.result {
+  background-color: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin: 1.5rem auto;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.result-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.result-item {
+  margin-bottom: 0.5rem;
+}
+
+.back-button {
+  background-color: hsl(var(--destructive));
+  color: hsl(var(--destructive-foreground));
+  margin-top: 1rem;
+}
+
+.back-button:hover {
+  background-color: hsl(var(--destructive) / 0.9);
+}
+
+.reset-button {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  margin-top: 1rem;
+}
+
+.reset-button:hover {
+  background-color: hsl(var(--primary) / 0.9);
+}
+
+/* Spacing utilities */
+.space-y-1 > :not([hidden]) ~ :not([hidden]) {
+  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
+}
+
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
+.space-y-6 > :not([hidden]) ~ :not([hidden]) {
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-8 > :not([hidden]) ~ :not([hidden]) {
+  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+}
+
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.gap-4 {
+  gap: 1rem;
+}

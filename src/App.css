@@ -1,0 +1,193 @@
+/* App.css */
+:root {
+  --background: 255 255 255; /* White */
+  --foreground: 51 51 51; /* Dark gray */
+
+  --primary: 0 123 255; /* Soft blue */
+  --primary-foreground: 255 255 255; /* White */
+
+  --secondary: 240 240 240; /* Light gray */
+  --secondary-foreground: 51 51 51; /* Dark gray */
+
+  --accent: 255 193 7; /* Vibrant orange */
+  --accent-foreground: 51 51 51; /* Dark gray */
+
+  --destructive: 220 53 69; /* Soft red */
+  --destructive-foreground: 255 255 255; /* White */
+
+  --border: 224 224 224; /* Light gray */
+  --radius: 0.5rem; /* Rounded corners */
+}
+
+/* Apply base styles */
+body {
+  background-color: rgb(var(--background));
+  color: rgb(var(--foreground));
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.App {
+  background-color: rgb(var(--background));
+  color: rgb(var(--foreground));
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 1200px;
+  width: 90%;
+  margin: 20px;
+}
+
+h1 {
+  color: rgb(var(--foreground));
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.product-message {
+  background-color: rgb(var(--secondary));
+  color: rgb(var(--foreground));
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.message-text {
+  white-space: pre-wrap; /* Preserve line breaks but allow text to wrap */
+  word-wrap: break-word; /* Break long words if necessary */
+}
+
+.app-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.history-panel {
+  background-color: rgb(var(--secondary));
+  color: rgb(var(--foreground));
+  border-radius: var(--radius);
+  padding: 1rem; /* Reduced from 1.5rem */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 250px; /* Reduced from 300px */
+}
+
+.history-panel h3 {
+  margin-bottom: 0.75rem; /* Reduced from 1rem */
+  font-size: 1.125rem; /* Reduced from 1.25rem */
+  font-weight: 600;
+  color: rgb(var(--primary));
+}
+
+.history-panel ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0; /* Remove default margin */
+}
+
+.history-panel li {
+  margin-bottom: 0.75rem; /* Reduced from 1rem */
+  font-size: 0.875rem; /* Reduced from 0.9rem */
+  line-height: 1.4;
+  padding: 0.5rem; /* Reduced from 0.75rem */
+  background-color: rgb(var(--background));
+  border-radius: var(--radius);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.history-panel li strong {
+  color: rgb(var(--primary));
+}
+
+.main-content {
+  background-color: rgb(var(--background));
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.step {
+  background-color: rgb(var(--secondary));
+  border: 1px solid rgb(var(--border));
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin: 1.5rem auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+button {
+  background-color: rgb(var(--primary));
+  color: rgb(var(--primary-foreground));
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: rgba(var(--primary), 0.9);
+  transform: translateY(-2px);
+}
+
+.result {
+  background-color: rgb(var(--secondary));
+  color: rgb(var(--foreground));
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin: 1.5rem auto;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.6;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.result-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.result-item {
+  margin-bottom: 0.5rem;
+}
+
+.back-button {
+  background-color: rgb(var(--destructive));
+  color: rgb(var(--destructive-foreground));
+  margin-top: 1rem;
+}
+
+.back-button:hover {
+  background-color: rgba(var(--destructive), 0.9);
+}
+
+.reset-button {
+  background-color: rgb(var(--accent));
+  color: rgb(var(--accent-foreground));
+  margin-top: 1rem;
+}
+
+.reset-button:hover {
+  background-color: rgba(var(--accent), 0.9);
+}
